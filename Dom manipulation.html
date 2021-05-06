@@ -1,0 +1,133 @@
+<html lang="en">
+
+<head>
+
+    <title>DOM manipulation</title>
+</head>
+<script class="html/javascript">
+    //   DOM--> document object manipulation
+    // There are different way of dom manipulation.They are..
+    // 1.getEementById();
+    // 2.getElementByClass();
+    // 3.getElementByTag();
+    // etc...
+
+    // eg getEementById 
+
+    function change() {
+        document.getElementById("h2").innerHTML = "The buttom has been clicked"
+    }
+    //taking value from the input and do dom manipultion
+    // function getValue(){
+    //     var name=document.getElementById("texr1").value;
+    //     var password=document.getElementById("password").value;
+    //     document.write("<h2>Your name  is "+name+" <h2>");
+    //     document.write("<h2>Your password is "+password+" <h2>");
+    // }
+
+    //write a program to take input as name and password and then do validation if the name and password enterd by the user is true then only display 
+    //the name and password of the user....
+    function getValue(){
+        var name=document.getElementById("texr1").value;
+        var password=document.getElementById("password").value;
+      if(name=="Shiv"&& password=="patel"){
+        document.write("<h2>Your name  is "+name+" <h2>");
+        document.write("<h2>Your password is "+password+" <h2>");
+      }
+      else{
+        document.write("<h2>Your name or password is wrong , please try again <h2>");  
+      }
+    }
+
+
+    //dom manipulation with radio button....
+    function getdata(){
+        var radio1=document.getElementById("radio1");
+        var radio2=document.getElementById("radio2");
+        if(radio1.checked==true){
+            alert("The selected radio button is " + radio1.value);
+        }
+        else{
+            alert("The selected radio button is "+radio2.value);
+        }
+    }
+  //dom manipulation using dropdown box....
+  function getselection(){
+      var option=document.getElementById("select");
+      document.write("<h2> The selected item is "+option.options[option.selectedIndex].value+"</h2")
+  }
+
+
+
+  //getElementByClass...
+ function getstyle(){
+     var element =document.getElementsByClassName("change");
+     for(var x=0;x<element.length;x++){
+         element[x].style.color="red";
+     }
+ }
+//getElementByTag.....
+function getNewStyle(){
+    var element1=document.getElementsByTagName("p");
+    for(var x=0;x<element1.length;x++){
+        element1[x].style.color="blue";
+    }
+}
+//onmouseover and onmouseout...
+function setNewImage(){
+    document.getElementById("img").src="E:\Photoes\Snapseed\DSC_0322-01.jpeg";
+}
+function setOldImage(){
+    document.getElementById("img").src="E:\Photoes\Snapseed\DSC_0152-02.jpeg";
+}
+
+</script>
+
+<body>
+    <h2 id="h2">This is shiv kumar chaudhary</h2>
+    <button onclick="change()">Click me</button>
+    <br>
+    <input type="text" id="texr1" placeholder="Enter your name">
+    <br>
+    <input type="password" id="password" placeholder="Enter your password">
+    <br>
+    <br>
+    <button onclick="getValue()">Submit</button>
+    <br>
+    <br>
+    <br>
+    <input type="radio" name="grp1" id="radio1" value="Male">Male
+    <br>
+    <input type="radio" name="grp1" id="radio2" value="Female">Female
+    <br>
+    <button onclick="getdata()">select</button>
+    <br>
+    <br>
+    <select  id="select">
+        <option value="Java programming">Java programming</option>
+        <option value="Python">Python</option>
+        <option value="Java Script">Java script</option>
+        <option value="Html">Html</option>  
+    </select>
+    <br>
+    <br>
+    <button onclick="getselection()"> Select</button>
+    <br><br><br>
+
+<p class="change">This is Shiv</p>
+<p>I am from Nepal</p>
+<p class="change">I an currently pursuring btech cs is computer science</p>
+<p>I will be the software engineer by 2021</p>
+<br><br>
+<button onclick="getstyle()">Click me</button>
+<br><br>
+<button onclick="getNewStyle()">getElementByTag</button>
+<br>
+<br>
+<br>
+<img  id="img" onmouseover="setNewImage()" onmouseout="setOldImage()" src="E:\Photoes\Snapseed\DSC_0152-02.jpeg" alt="sorry image can't load" width="200px;">
+
+
+</body>
+
+</html>

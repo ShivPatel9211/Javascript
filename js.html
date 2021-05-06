@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+  <title>Java script </title>
+</head>
+
+<body>
+  <script class="text/script">
+    //looping in html
+    /* for loop
+    while loop 
+    do while loop
+    */
+    //while loop
+    var num = 0;
+    while (num < 5) {
+      document.write("<h1>" + num + "</h1>")
+      num++;
+    }
+    // do while loop
+    var num1 = 0;
+    do {
+      document.write("<h1>" + num1 + "</h1>")
+      num1++;
+
+    } while (num1 > 5);
+    //object in java script   
+    //decleration of object in java script
+    var student = {
+      id: 1,
+      name: "Shiv",
+      class: 'Btech CSE'
+
+    };
+    document.write("<h2>" + student.id + "</h3>");
+    document.write("<h2>" + student.name + "</h3>");
+    document.write("<h2>" + student.class + "</h3>");
+     //program to calculate factorial of the number
+     var num =prompt("Enter the number");
+     var i;
+     var fact =1;
+     if(num==0 )
+     {
+       document.write("<h2>The factorial of the given number is 1</h2>");
+      
+     }else{
+       for(i=num;i>0;i--)
+       {
+         fact=fact*i;
+       }
+       document.write("<h2>The factorial of the number is : "+ fact+"</h2>")
+     }
+    
+
+  </script>
+</body>
+
+</html>

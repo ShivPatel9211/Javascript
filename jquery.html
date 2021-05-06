@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+
+    <title>Jquery Introduction</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+ <button id="btn1">Click me 1</button>
+ <button id="btn2">Click me 2</button>
+ <button id="btn3">Click me 3</button>
+ <button id="btn4">Click me 4</button>
+
+
+    <div class="div" id="first">
+        <p>This is Introduction of jquery in javascript</p>
+        <p>This is Introduction of jquery in javascript</p>
+
+        <p>This is Introduction of jquery in javascript</p>
+
+    </div>
+    <div class="div" id="secand">
+        <h3>This is only the heading</h3>
+        <h3>This is only the heading</h3>
+
+        <h3>This is only the heading</h3>
+
+        <h3>This is only the heading</h3>
+
+    </div>
+    <div class="div" id="listing">
+        <ol>
+            <li>Option 1</li>
+            <li>Option 2</li>
+
+            <li>Option 3</li>
+            <li>Option 4</li>
+            <li>Option 5</li>
+            <li>Option 6</li>
+
+        </ol>
+
+
+    </div>
+    <ul>
+        <li>option 1</li>
+        <li>option 2</li>
+        <li>option 3</li>
+        <li>option 4</li>
+        <li>option 5</li>
+
+
+    </ul>
+
+
+
+
+
+
+
+    <script src="jQuery/jquery.js"></script>
+    <script>
+   $(document).ready(function(){
+       $("#btn1").click(fn1);
+       $("#btn2").mouseover(fn2);
+       $("#btn3").mouseout(fn3);
+       $("#btn4").hover(fn2,fn3);
+       
+
+
+
+       
+     function fn1(){
+        // $("#first").fadeToggle();
+         $("#first").slideUp(2000);
+
+     }
+     function fn2(){
+      //   $("#secand").fadeOut();
+        // $("#first").show();
+        $("#first").slideUp;
+
+
+     }
+     function fn3(){
+        // $("#secand").fadeIn();
+        
+     }
+
+
+
+   })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+.div{
+    width: 50%;
+    border: solid 5px red;
+    margin: 10px;
+    padding: 20px;
+}
+#cube{
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    opacity: .4;
+    margin-top:10px;
+}
+#first{
+    border: solid 3px blue;
+    padding: 10px;
+    margin: 10px;
+    color:seagreen;
+}
+#second{
+    border: solid 3px rebeccapurple;
+    padding :10px;
+    margin : 10px;
+    
+}
+.newclass{
+    border: dotted 3px black;
+    background-color: navy;
+    font-size: larger;
+
+}
+.newclass1{
+    border: double 5px forestgreen;
+    background-color: hotpink;
+    font: outline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 40px;
+}
+#img{
+    border: solid 2px blue;
+    margin: 20px;
+    width: 220px;
+    height: 220px;
+}
+#h22{
+    border: solid 3px red;
+    padding: 20px;
+    margin: 10px;
+    width: 220px;
+}
+#autocomplete{
+    border: 2px solid brown;
+    width: 250px;
+    height: 50px;
+    padding: 10px;
+
+}

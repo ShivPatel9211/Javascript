@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+
+    <title>Form validation</title>
+</head>
+
+<body>
+    <script class="text/javascript">
+     function validation(){
+         var username=document.getElementById("username");
+         var password=document.getElementById("password");
+         if(username.value.trim()==""){
+         
+             username.style.border = "solid 3px red";
+             alert("Username is missing");
+             return false;
+         }
+         else 
+            if(password.value.trim()==""){
+             
+             password.style.border="solid 3px red";
+             alert("Password is missing");
+             return false;
+         }
+         else{
+             return true;
+         }
+     }
+    </script>
+    <form  onsubmit=" return validation()"  action="valid.html">
+        <input type="text" id="username" placeholder="Please enter user name" name="username">
+        <br><br>
+        <input type="password" id="password" placeholder="Please enter user password" name="password">
+        <br><br>
+        <button type="submit"> Submit</button>
+        
+        
+    </form>
+
+
+</body>
+
+</html>

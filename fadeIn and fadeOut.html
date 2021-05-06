@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+   
+    <title>FadeIn and FadeOut</title>
+    <script type="text/javascript">
+
+
+   var id=0;
+   var  opacity=0;
+
+    function FadeOut(){
+      id=window.setInterval(hide,100);
+
+    }
+    function hide(){
+        var img= document.getElementById("img");
+        opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity>0)
+        {
+            opacity=opacity-0.1;
+            img.style.opacity=opacity;
+        }
+        else{
+            clearInterval(id);
+        }
+    }
+    function FadeIn(){
+      id=window.setInterval(show,100);
+
+    }
+    function show(){
+        var img= document.getElementById("img");
+        opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+        if(opacity<1)
+        {
+            opacity=opacity+0.1;
+            img.style.opacity=opacity;
+        }
+        else{
+            clearInterval(id);
+        }
+    }
+    </script>
+</head>
+<body>
+    <button onclick="FadeOut() " type="button">FadeOut</button>
+    <img  id="img"  src="E:\Photoes\Snapseed\DSC_0322-01.jpeg" alt="sorry image can't load" style="width: 220px ;" >
+    <button type="button" onclick="FadeIn()">FadeIn</button>
+</body> 
+</html>

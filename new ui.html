@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+  <title>Jquery Ui Introduction</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="Jquery ui/jquery-ui.css">
+  <link rel="stylesheet" href="Jquery ui/jquery-ui.structure.css">
+  <link rel="stylesheet" href="Jquery ui/jquery-ui.theme.css">
+
+</head>
+
+<body>
+  <script src="jQuery/jquery.js"></script>
+  <script src="Jquery ui/jquery-ui.js"></script>
+
+ 
+  <div id="autocomplete">
+      <label > Enter your city</label>
+    <input type="text"  id="auto" placeholder="Enter your city name">
+
+  </div>
+
+  <script>
+ 
+      var city = ["Butwal", "Parasi", "Bhairahawa", "Gopijung", "Kanpur", "Raipur", "Delhi", "Gorakphur", "Kasmir", "Pune", "New York", "New jersay", "WashingTone"];
+      $("#auto").autocomplete(
+          {
+        source: city
+       },
+        {
+           autoFocus:true,
+           delay:0,
+           minLength:2,
+        });
+
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

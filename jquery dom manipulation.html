@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+
+    <title>JQuery dom manipulation</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- The different jquery dom manipulation tags are
+ text()
+ html()
+ css()
+ attr() -->
+
+
+
+<!-- Other dom manipulation method are;;
+append() //insert content at the end of the selected item
+after()  insert content  after selected elements
+prepend()  insert content at the beginning of the selected element 
+before() insert content before the selected element.
+empty()
+remove() -->
+
+
+<!-- Other classes method used to manipulate the html document are..
+1.addClass()
+2.removeClass()
+3.toggleClass() -->
+
+
+
+</head>
+
+<body>
+    
+    <button id="btn1">Click me</button>
+    <button id="btn2">Append</button>
+    <button id="btn3">After</button>
+    <button id="btn4">Prepend</button>
+    <button id="btn5">Before</button>
+    <button id="btn6">Empty</button>
+    <button id="btn7">Remove</button>
+    <button id="btn8">Add Class</button>
+    <button id="btn9">Remove Class</button>
+    <button id="btn10">Toggle Class</button>
+
+
+
+    <div id="first">
+        <p id="p1">This is first paragraph of first div</p>
+        <p id="p2">This is second paragraph of first div</p>
+
+    </div>
+    <div id="second">
+        <p id="p3" class="third" value="Hello world">This is first paragraph of second div</p>
+        <script src="jQuery/jquery.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#btn1").click(function () {
+                   // $("#p1").text("Hello world");// this method only change the internal text of the selected item bt its can't manipulate the html item...
+                 //  $("#p2").html("<h2>This is heading 2 </h2> <i>This is an Italic font</i>"); //this method can change gthe inner text as well as html tags
+                // alert( "The font-size is " + $("#p3").css("font-size")); //this tells the properties of selected item..
+               // $("#p3").css("font-size" ,"30px");// this change the properties of selected item..
+               alert( "The attribute  is " + $("#p3").attr("value"));
+
+                })
+                $("#btn2").click(function(){
+                    $("#p1").append("<p>This is after apppend</p>");
+                    $("#first").append("<p>This is after apppend</p>");
+
+                })
+                $("#btn4").click(function(){
+                   // $("#p2").prepend("<p>This is after prepend</p>");
+                    $("#first").prepend("<p>This is after prepend</p>");
+
+                })
+                $("#btn3").click(function(){
+                   $("#p2").after("<p>This is after after method</p>");
+                    $("#first").after("<p>This is after after method </p>");
+
+                })
+                $("#btn5").click(function(){
+                   $("#p3").before("<p>This is after before method</p>");
+                    $("#second").before("<p>This is after before method </p>");
+
+                })
+                $("#btn6").click(function(){
+                   $("#first").empty();
+                   $("#p1").empty();
+                })
+
+
+                $("#btn7").click(function(){
+                   $("p").remove("#p3");
+                  // $("#p1").empty();
+                })
+
+                $("#btn8").click(function(){
+                   $("#first").addClass("newclass newclass1" );
+                   $("#second").addClass("newclass1");
+
+                
+                })
+                $("#btn9").click(function(){
+                   $("#first").removeClass("newclass1" );
+                  // $("#second").removeClass("newclass1");
+
+                
+                })
+                $("#btn10").click(function(){
+                   $("#first").toggleClass("newclass1");
+                   $("#p3").toggleClass("newclass1");
+
+                
+
+                
+                })
+
+
+            });
+
+
+        </script>
+</body>
+
+</html>

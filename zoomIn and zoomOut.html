@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    
+    <title>ZoomIn and ZoomOut</title>
+    <script>
+        var width=220;
+        var id=0;
+        var difference=2;
+        function ZoomIn(){
+            clearInterval(id);
+           id= setInterval(zoom,30);
+        }
+        function zoom(){
+            if(width<500){
+                width=width+difference;
+            document.getElementById("img").style.width=width;
+            }
+            else{
+                clearInterval(id);
+            }
+           
+        }
+        function ZoomOut(){
+            clearInterval(id);
+           id= setInterval(zoomin,30);
+        }
+        function zoomin(){
+           if(width>220){
+            width=width-difference;
+            document.getElementById("img").style.width=width;
+           }
+           else{
+            cleaFrInterval(id);
+           }
+        }
+  
+
+    </script>
+</head>
+<body>
+    
+    <img id="img" width="220px;" onmouseover="ZoomIn()" onmouseout="ZoomOut()"  src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" alt="sorry img can't load" >
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    
+    <title>Aniaminate</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <button id="animate">Animate</button>
+    <button id="toggle">Toggle</button>
+    <div class ="cube">
+        <p id="cube">Cube</p>
+        
+
+    </div>
+    <div id="first">
+        <p>This is first paragraph of first div</p>
+        <p>This is second paragraph of first div</p>
+
+    </div>
+<div id="second">
+    <p>This is first paragraph of second div</p>
+
+
+</div>
+    <script src="jQuery/jquery.js"></script>
+    <script>
+   $(document).ready(function(){
+      $("#animate").click(function(){
+        
+        $("#cube").animate({
+
+            left:'150px',
+            opacity:'1',
+            width:'150px',
+            height:'150px'
+
+
+        },3000) ;    
+
+
+      });
+      //call back function..
+    //   $("#toggle").click(function(){
+    //       $("#first").fadeToggle(3000 ,function(){
+    //           alert("div has successfully faded");
+    //       });
+    //   })
+
+    function readmdg(){
+        alert("done");
+    }
+
+    $("#toggle").click(function(){
+         // $("#first").slideToggle(3000 ,readmdg);
+         $("#first").slideUp(3000 ).slideDown(2000,readmdg);
+        
+          
+      })
+
+
+   });
+    </script>
+</body>
+</html>
